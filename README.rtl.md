@@ -1,0 +1,1 @@
+اول کامند npm run build رو وارد کن بعد npm run ssr

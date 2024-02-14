@@ -1,4 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-const root = ReactDOM.hydrateRoot(document.getElementById("root"), <App />); 
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+
+ReactDOM.hydrateRoot(document.getElementById("root"), <App />); 

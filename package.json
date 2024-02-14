@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/node": "^7.23.9",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,9 +16,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "csr": "react-scripts start",
     "build": "react-scripts build",
-    "babel": "npx nodemon --exec npx babel-node server.js"
+    "ssr": "npx node --exec npx babel-node server.js",
+    "dev": "npx nodemon --exec npx babel-node server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -41,12 +40,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@babel/register": "^7.23.7",
     "ignore-styles": "^5.0.1"
   },
-  "description": "اول باید node renderToString رو اجرا کنی وقتی که کامپوننت به حالت static در اومد و در فایل index.html ذخیره شد بعد میتونی کامند npm start رو اجرا کنی تا اپلیکیشن به حالت ssr و هیدراته اجرا بشه و در آخر هم کامند npm run build",
+  "description": "",
   "main": "index.js",
   "author": "",
   "license": "ISC"
